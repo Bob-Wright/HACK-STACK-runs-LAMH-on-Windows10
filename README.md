@@ -1,0 +1,2 @@
+# HACK-STACK-runs-LAMH-on-Windows10
+This tutorial explains how to set up and run a Bitnami Ubuntu 18.04 Linux, Apache, mySQL, and HHVM (LAMH) stack on a Windows 10 machine by using the Windows Subsystem for Linux (WSL). The use of WSL allows Linux to run alongside Windows 10 without the need for a second device or virtual machine. Setting up the LAMH stack this way offers three significant benefits to the user.
