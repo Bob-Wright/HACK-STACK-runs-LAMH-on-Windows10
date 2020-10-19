@@ -6,3 +6,7 @@ The first benefit is that the setup provides a nice development environment for 
 The second benefit is that this approach creates an easy to reload or copy LAMH installation. By exporting a tarball archive backup of the setup it can easily be restored or reloaded to this baseline setup. Moreover, the tarball can be transported or copied to another Windows 10 machine and made to run the same setup on the target computer. So for example all the students in a class room could easily have identically the same baseline setup. Here at The Palace the same setup is running on a workstation and on a laptop.
 
 The third benefit is that using the Bitnami Ubuntu HHVM stack in this environment provides a close approximation to what is presented by the same stack installed on Amazon Web Services (AWS) or a true standalone server.
+
+I like writing code and I like learning how to write it. I want to learn HACK. This lets me do that on a local machine.
+
+Information and Knowledge is Power. Power will get you Freedom, and Freedom is not negotiable. I have a huge debt of gratitude for all the tutorials and forums and blogs and Github sites that have helped me learn, and hopefully this tutorial will help me pay the debt forward by helping you. You should learn to code so that when the battle with the robots begins you will be equipped to be a winner.
