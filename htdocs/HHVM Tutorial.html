@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>HHVM Stack Tutorial</title>
+<style type="text/css" media="screen">
+body {
+    width: 100%;
+    height: 100%;
+	margin: 0;
+	background-color: #fff;
+}
+h1 {
+color: #000;
+font-size: 50px;
+margin-left: 2vw;
+margin-right: 2vw;
+}
+h2 {
+color: #000;
+font-size: 30px;
+margin-left: 2vw;
+margin-right: 2vw;
+}
+p {
+color: #000;
+font-size: 20 px;
+margin-left: 2vw;
+margin-right: 2vw;
+}
+</style>
+<body>
+<h1>Run a Bitnami Ubuntu 18.04 LTS HHVM stack on Windows 10 using Windows Subsystem for Linux</h1>
+
+<p>This tutorial explains how to set up and run a <strong>Bitnami Ubuntu 18.04 Linux, Apache, mySQL, and HHVM (LAMH) stack</strong> on a <strong>Windows 10</strong> machine by using the <strong>Windows Subsystem for Linux (WSL)</strong>. The use of <strong>WSL</strong> allows <strong>Linux</strong> to run alongside <strong>Windows 10</strong> without the need for a second device or virtual machine. Setting up the <strong>LAMH</strong> stack this way offers three significant benefits to the user.</p>
+
+<p>The first benefit is that the setup provides a nice development environment for a <strong>LAMH</strong> stack on a <strong>Windows</strong> machine. So for example, some change can be made to the stack or its contents and the result can be seen at the same time in a <strong>Chrome</strong> browser running on the <strong>Windows</strong> "machine". The user has access to the <strong>Linux</strong> command console within a window on the same screen.</p>
+
+<p>The second benefit is that this approach creates an easy to reload or copy LAMH installation. By exporting a tarball archive backup of the setup it can easily be restored or reloaded to this baseline setup. Moreover, the tarball can be transported or copied to another <strong>Windows 10</strong> machine and made to run the same setup on the target computer. So for example all the students in a class room could easily have identically the same baseline setup. Here at <strong>The Palace</strong> the same setup is running on a workstation and on a laptop.</p>
+
+<p>The third benefit is that using the <strong>Bitnami Ubuntu HHVM stack</strong> in this environment provides a close approximation to what is presented by the same stack installed on <strong>Amazon Web Services (AWS)</strong> or a true standalone server.</p>
+
+<p>Before beginning the setup you need to make certain that your <strong>Windows 10</strong> version is up to date. If the version is current the rest of the setup should go without a hitch. It is also probably helpful to glance over the entire procedure as described here before beginning, and view the quick introductory video. All of the steps are relatively straightforward and none of this is rocket appliances.</p>
+
+<p>The first thing we need to do is install the <strong>Windows Subsystem for Linux</strong>, or <strong>WSL</strong>. <strong>Microsoft</strong> refers to the product we will use as the <strong>WSL 2 lightweight utility virtual machine</strong>. The method we use here is through the <strong>Settings</strong> dialog on the <strong>Windows Start Menu</strong>. Open the <strong>Settings</strong> main panel and click on <strong>Apps</strong>. From the <strong>Apps & features</strong> panel click <strong>Programs and Features</strong> on the right side. On the panel that opens click the <strong>Turn Windows features on or off</strong> option in the left pane. In the resulting dialog box locate the <strong>Windows Subsystem for Linux</strong> selection and select it and click <strong>OK</strong>. Finally click on the <strong>Restart now</strong> button. This completes the basic install of <strong>WSL</strong>. The following images show a visual recap of the process.</p>
+<center><img style="border-style: solid; border-width: 3px;" src="./WSLInstallSequence600_0001_Layer0.jpg" width="600px" height="464px"></center>
+<center>WSLInstallSequence600_0001_Layer0.jpg</center>
+<center><img style="border-style: solid; border-width: 3px;" src="./WSLInstallSequence600_0002_Layer1.jpg" width="600px" height="464px"></center>
+<center>WSLInstallSequence600_0002_Layer1.jpg</center>
+<center><img style="border-style: solid; border-width: 3px;" src="./WSLInstallSequence600_0003_Layer3.jpg" width="600px" height="464px"></center>
+<center>WSLInstallSequence600_0003_Layer3.jpg</center>
+<center><img style="border-style: solid; border-width: 3px;" src="./WSLInstallSequence600_0004_Layer4.jpg" width="600px" height="464px"></center>
+<center>WSLInstallSequence600_0004_Layer4.jpg</center>
+<p>Next we want to tell <strong>WSL</strong> to run as version 2. This version has an actual <strong>Linux</strong> kernel instead of converting <strong>Linux</strong> requests to <strong>Windows</strong> function calls. We accomplish this through a <strong>Windows Command Prompt</strong> using <strong>Run As Administrator</strong> as shown here.</p>
+<center><img style="border-style: solid; border-width: 3px;" src="./InstallHHVMSequence600_0001_Layer2.jpg" width="600px" height="466px"></center>
+<center>InstallHHVMSequence600_0001_Layer2.jpg</center>
+<p>At the prompt enter the following command:<br>
+<strong>wsl --set-default-version 2</strong><br>
+We will use the command prompt again, so leave the <strong>Command Prompt</strong> window open. We suggest pinning the Cmd prompt to the Taskbar.</p>
+
+<p>Now we have to select and install a <strong>Linux</strong> distro to run under the <strong>WSL</strong> we just set up. Open the <strong><a ref="https://aka.ms/wslstore">Microsoft Store</a></strong> and search for <strong>Ubuntu</strong>. In the dropdown choose <strong>Ubuntu 18.04 LTS</strong> from the selections and on the resulting product panel click the <strong>Install</strong> button at the upper right. After the distro has installed, the <strong>Install</strong> button will change to a <strong>Launch</strong> button. A launch button will also be added to the <strong>Start Menu</strong>. Besides those two indications, <strong>Windows</strong> will show a message offering to launch the distro or pin it to the start menu. This activity is recapped in these screens</p>
+<center><img style="border-style: solid; border-width: 3px;" src="./UbuntuInstallSequence600_0000_Layer0.jpg" width="600px" height="466px"></center>
+<center>UbuntuInstallSequence600_0000_Layer0.jpg</center>
+<center><img style="border-style: solid; border-width: 3px;" src="./UbuntuInstallSequence600_0001_Layer1.jpg" width="600px" height="466px"></center>
+<center>UbuntuInstallSequence600_0001_Layer1.jpg</center>
+<center><img style="border-style: solid; border-width: 3px;" src="./UbuntuInstallSequence600_0002_Layer3.jpg" width="600px" height="466px"></center>
+<center>UbuntuInstallSequence600_0002_Layer3.jpg</center>
+<center><img style="border-style: solid; border-width: 3px;" src="./UbuntuInstallSequence600_0003_Layer4.jpg" width="600px" height="466px"></center>
+<center>UbuntuInstallSequence600_0003_Layer4.jpg</center>
+<p>Let's just close the <strong>Microsoft Store</strong> window and instead click the <strong>Ubuntu</strong> launch button in the <strong>Start Menu</strong>.</p>
+
+<p>In a few moments a new terminal window as shown here will open and display a message <strong>"Installing, this may take a few minutes..."</strong> followed by a prompt to enter a new UNIX username.</p>
+<center><img style="border-style: solid; border-width: 3px;" src="./UbuntuInstallSequence600_0004_enterthepasswordHacker.jpg" width="600px" height="466px"></center>
+<center>UbuntuInstallSequence600_0004_enterthepasswordHacker.jpg</center>
+<p>For our tutorial we chose the creative username of <strong>hhvmuser</strong>. After providing a username the system prompts for a password which will have to be entered twice for safety. Because we will probably need to provide this password during the course of operating the system we choose the short memorable password of <strong>Hacker</strong>. Congratulations, you have just installed <strong>Ubuntu 18.04 LTS Linux</strong> on your <strong>Windows 10</strong> machine! Pin the distro to your <strong>Taskbar</strong> and enter <strong>exit</strong> at the <strong>Linux</strong> prompt.</p>
+
+<p>In the next sequence of operations we will do some admin housekeeping on our new distro using the <strong>Windows Command prompt</strong> and the <strong>WSL</strong> program. When <strong>Windows</strong> installs the <strong>WSL</strong> system and <strong>Linux</strong> distros, it places the the </strong>WSL</strong> loadable distros in the <strong>Program Files\WindowsApps</strong> folder. Because of drive size we may want to place our distro on another drive, but in any case we believe it is to be preferred to have our distro install in its own folder. It is also a good idea to have a sort of a backup of our installed setup. Coincidentally, moving the install to another folder creates a <strong>tarball (TAR file)</strong> of the installed distro.</p>
+
+<p>This <strong>Windows Command</strong> window</p>
+<center><img style="border-style: solid; border-width: 3px;" src="./InstallHHVMSequence600_0014_Layer3.jpg" width="600px" height="466px"></center>
+<center>InstallHHVMSequence600_0014_Layer3.jpg</center>
+<p>displays the currently installed <strong>Linux</strong> distros as shown here:<br>
+<strong>C:\WINDOWS\system32>wsl --list --all<br>
+Windows Subsystem for Linux Distributions:<br>
+Ubuntu-18.04 (Default)</strong><br>
+Then enter this next command which will create a tarball archive of the specified distro as shown here:<br>
+<strong>C:\WINDOWS\system32>wsl --export Ubuntu-18.04 D:\UbuntuHHVM.tar</strong><br>
+Now we want to remove the present distro from the WSL system and replace it with our tarballed system on another drive. We can accomplish that action with the next two commands:<br>
+<strong>C:\WINDOWS\system32>wsl --unregister Ubuntu-18.04<br>
+Unregistering...<br>
+C:\WINDOWS\system32>wsl --import Ubuntu-18.04 D:\UbuntuHHVM d:\UbuntuHHVM.tar</strong></p>
+
+<p>Now if we click our <strong>Ubuntu</strong> launch button on the Taskbar our <strong>Linux</strong> command console will reopen except that it will be using the files we just relocated. And notice that the command prompt now reflects <strong>root</strong> instead of <strong>hhvmuser</strong> as the logged on user! Our hhvmuser is still available as we can see with a <strong>getent passwd</strong> command. If we enter the command <strong>su hhvmuser</strong> we will switch to our ordinary user account installed previously while keeping the <strong>root</strong> username available by an exit command. At this point we have a <strong>WSL</strong> instance of <strong>Ubuntu 18.04 LTS Linux</strong> on our <strong>Windows 10</strong> system running from our computer's <strong>D:</strong> drive.</p>
+
+<p>Let's now get to the main task of the setup, which is to update our installed distro, and then leverage that setup to download and install a <strong>Bitnami Ubuntu</strong> stack including the <strong>HHVM</strong> machine, and then to finally update that setup and save a copy as a tarball.</p>
+
+<p>From our root account in the <strong>Linux</strong> command console run the command <strong>apt -update</strong> followed by the command <strong>apt-get upgrade</strong>. These two commands will update and upgrade the installed <strong>Linux</strong> system components to the latest stable versions and may take some time depending on network bandwidth and the target computer.</p>
+
+<p>A link URL we can use to browse the <strong>Bitnami LAMH stack installer</strong> download page is <strong>https://bitnami.com/download/files/stacks/hhvm/3.30.12-5/bitnami-hhvm-3.30.12-5-linux-x64-installer.run</strong>
+but the actual file URL we will download from is <strong>https://bitnami.com/redirect/to/1172073/bitnami-hhvm-3.30.12-5-linux-x64-installer.run?bypassauth=false&fb=1</strong>
+which we can discern by right clicking the click here link on the browser page.</p>
+
+<p>In our <strong>Ubuntu console window</strong> change the current directory to the </strong>/opt</strong> directory with the command <strong>cd /opt</strong>, and then to download the installer execute the command<br>
+<strong>wget https://bitnami.com/redirect/to/1172073/bitnami-hhvm-3.30.12-5-linux-x64-installer.run</strong><br>
+When the installer has completed its download we can observe the changes in our /opt folder:<br>
+<strong>root@BobosRevenge:/opt# ll<br>
+total 198592<br>
+drwxr-xr-x  2 root root      4096 Oct 16 20:28 ./<br>
+drwxr-xr-x 23 root root      4096 Oct 16 20:38 ../<br>
+-rw-r--r--  1 root root 203348784 Oct  3 12:19 bitnami-hhvm-3.30.12-5-linux-x64-installer.run</strong><br>
+To my mind one of the great beauties of <strong>Linux</strong> is the notion of security and self protection that it embodies in its implementation. So even though we are the root user if we now try to execute or run the installer file we will get a Permission denied error:<br>
+<strong>root@BobosRevenge:/opt# /opt/bitnami-hhvm-3.30.12-5-linux-x64-installer.run<br>
+-bash: /opt/bitnami-hhvm-3.30.12-5-linux-x64-installer.run: Permission denied</strong><br>
+We will adjust the permissions on the installer file to allow us to run it with a chmod command and check our results as follows:<br>
+<strong>root@BobosRevenge:/opt# chmod 755 /opt/bitnami-hhvm-3.30.12-5-linux-x64-installer.run<br>
+root@BobosRevenge:/opt# ll<br>
+total 198592<br>
+drwxr-xr-x  2 root root      4096 Oct 16 20:28 ./<br>
+drwxr-xr-x 23 root root      4096 Oct 16 20:38 ../<br>
+-rwxr-xr-x  1 root root 203348784 Oct  3 12:19 bitnami-hhvm-3.30.12-5-linux-x64-installer.run*</strong><br>
+We have successfully given execute permissions to the installer file, so let's run it and load our HHVM stack.</p>
+
+<p>Following next is a screen capture transcription of the installer execution process. In each case where the installer has requested our response we just hit Enter to select the default value. For the <strong>mySQL password</strong> we use what we chose earlier for our <strong>hhvmuser</strong> account, <strong>Hacker</strong>. Finally, some of the displayed blank lines were omitted here.<br>
+<strong>root@BobosRevenge:/opt# /opt/bitnami-hhvm-3.30.12-5-linux-x64-installer.run<br>
+----------------------------------------------------------------------------<br>
+Welcome to the Bitnami HHVM Stack Setup Wizard.<br>
+----------------------------------------------------------------------------<br>
+Select the components you want to install; clear the components you do not want<br>
+to install. Click Next when you are ready to continue.<br>
+HHVM Component : Y (Cannot be edited)<br>
+Varnish [Y/n] :<br>
+PhpMyAdmin : Y (Cannot be edited)<br>
+Is the selection above correct? [Y/n]:<br>
+----------------------------------------------------------------------------<br>
+Installation folder<br>
+Please, choose a folder to install Bitnami HHVM Stack<br>
+Select a folder [/opt/hhvm-3.30.12-5]:<br>
+----------------------------------------------------------------------------<br>
+Create MySQL 'root' Account<br>
+Bitnami HHVM Stack database root user creation<br>
+Password :   < we enter Hacker in response to these two requests ><br>
+Re-enter :<br>
+----------------------------------------------------------------------------<br>
+Setup is now ready to begin installing Bitnami HHVM Stack on your computer.<br>
+Do you want to continue? [Y/n]:<br>
+----------------------------------------------------------------------------<br>
+Please wait while Setup installs Bitnami HHVM Stack on your computer.<br>
+ Installing<br>
+ 0% ______________ 50% ______________ 100%<br>
+ #########################################<br>
+----------------------------------------------------------------------------<br>
+Setup has finished installing Bitnami HHVM Stack on your computer.<br>
+Launch Bitnami HHVM Stack [Y/n]: y</strong></p>
+<p>This screen recaps some of the preceding installation activity.</p>
+<center><img style="border-style: solid; border-width: 3px;" src="./InstallHHVMSequence600_0000_Layer1.jpg" width="600px" height="466px"></center>
+<center>InstallHHVMSequence600_0000_Layer1.jpg</center>
+
+<p><strong>We now have a Bitnami HHVM stack running in WSL on Windows 10</strong>! If we look at our setup folders we can see that a new folder <strong>hhvm-3.30.12-5/</strong> has been added to the /opt folder, and that is where our stack lives.
+<strong>root@BobosRevenge:/opt# ll<br>
+total 198596<br>
+drwxr-xr-x  3 root root      4096 Oct 16 20:49 ./<br>
+drwxr-xr-x 23 root root      4096 Oct 16 20:38 ../<br>
+-rwxr-xr-x  1 root root 203348784 Oct  3 12:19 bitnami-hhvm-3.30.12-5-linux-x64-installer.run*<br>
+drwxr-xr-x 20 root root      4096 Oct 16 20:52 hhvm-3.30.12-5/</strong><br>
+<br>
+The Bitnami stack uses a script file to manage its services. Here we have the description of its usage:<br>
+<strong>root@BobosRevenge:/opt# /opt/hhvm-3.30.12-5/ctlscript.sh help<br>
+usage: /opt/hhvm-3.30.12-5/ctlscript.sh help<br>
+       /opt/hhvm-3.30.12-5/ctlscript.sh (start|stop|restart|status)<br>
+       /opt/hhvm-3.30.12-5/ctlscript.sh (start|stop|restart|status) mysql<br>
+       /opt/hhvm-3.30.12-5/ctlscript.sh (start|stop|restart|status) hhvm<br>
+       /opt/hhvm-3.30.12-5/ctlscript.sh (start|stop|restart|status) apache<br>
+help       - this screen<br>
+start      - start the service(s)<br>
+stop       - stop  the service(s)<br>
+restart    - restart or start the service(s)<br>
+status     - show the status of the service(s)</strong></p>
+
+<p>Now lets use the script to check our HHVM stack components status:<br>
+<strong>root@BobosRevenge:/opt# /opt/hhvm-3.30.12-5/ctlscript.sh status<br>
+hhvm already running<br>
+apache already running<br>
+mysql already running<br>
+root@BobosRevenge:/opt#</strong></p>
+
+<p>That looks good. However, as always, looks can be deceiving. If we open a browser, say <strong>Chrome</strong>, on our <strong>Windows</strong> desktop and browse to <strong>http://127.0.0.1</strong> or <strong>http://127.0.0.1/index.html</strong> we will receive an error message that the link can't be found.</p>
+<center><img style="border-style: solid; border-width: 3px;" src="./InstallHHVMSequence600_0003_Layer4.jpg" width="600px" height="466px"></center>
+<center>InstallHHVMSequence600_0003_Layer4.jpg</center>
+<p>In these next two steps we will correct the issues that cause this problem. Making these corrections or modifications uses a text editor, the <strong>Vim</strong> editor is readily available here on our installed stack. So let's stop the stack services with a <strong>/opt/hhvm-3.30.12-5/ctlscript.sh stop</strong> command and make our edits to two of the configuration files.</p>
+<center><img style="border-style: solid; border-width: 3px;" src="./InstallHHVMSequence600_0004_Layer12.jpg" width="600px" height="466px"></center>
+<center>InstallHHVMSequence600_0004_Layer12.jpg</center>
+
+<p>One of the two issues that cause the difficulty we see are the <strong>TCP/IP Ports</strong> that <strong>Apache</strong> uses by default, which are <strong>Port 80</strong> and <strong>Port 443</strong>, the two <strong>HTTP/HTTPS</strong> ports ordinarily assumed for those connections. By default ports lower than 1024 can only be used by the root user. So we will modify those two port values in two configuration files using Vim. Both of the files are under the same folder so let's go there with a <strong>cd /opt/hhvm-3.30.12-5/Apache2/conf</strong> command. An <strong>ll</strong> command will show a subfolder, </strong>bitnami</strong>, and that folder contains a file named <strong>bitnami.conf</strong> which contains some of the Apache directives relative to Port usage. Let's edit that file with the command <strong>vim bitnami/bitnami.conf</strong> to make these changes. Good practice would suggest backing up the files before editing.</p>
+<center><img style="border-style: solid; border-width: 3px;" src="./InstallHHVM Sequence600_0005_Layer6.jpg" width="600px" height="466px"></center>
+<center>InstallHHVM Sequence600_0005_Layer6.jpg</center>
+<center><img style="border-style: solid; border-width: 3px;" src="./InstallHHVMSequence600_0006_Layer7.jpg" width="600px" height="466px"></center>
+<center>InstallHHVMSequence600_0006_Layer7.jpg</center>
+
+<p>Within the <strong>bitnami.conf</strong> configuration file near the top locate the two lines containing <strong>NameVirtualHost</strong> with the values of <strong>80</strong> and <strong>443</strong> respectively. Change the two values to <strong>8080</strong> and <strong>8443</strong> respectively. Below that initial section is a section for HTTP and another for HHTPS. Change the value of <strong>VirtualHost _default_:</strong> in the HHTP section from <strong>80</strong> to <strong>8080</strong> and in the HTTPS section change the value from <strong>443</strong> to <strong>8443</strong>. Save the modified <strong>bitnami.conf</strong> file.</p>
+
+<p>The second configuration file we will modify to change the default Port values also contains directives that we will modify to correct our second issue, the <strong>HHVM</strong> handler. When we complete this edit we should have a fully functional HHVM stack running on <strong>Windows 10</strong>. So invoke the Vim editor on the <strong>httpd.conf</strong> file in our <strong>conf</strong> folder. The port values we want to change are contained in two lines within the file. The first line is <strong>Listen 80</strong>, and we want to change that to <strong>Listen 127.0.0.1:8080</strong> and the second line is <strong>ServerName localhost:80</strong> and we want to change that to <strong>ServerName 127.0.0.1:8080</strong>.</p>
+<center><img style="border-style: solid; border-width: 3px;" src="./InstallHHVMSequence600_0008_Layer8.jpg" width="600px" height="466px"></center>
+<center>InstallHHVMSequence600_0008_Layer8.jpg</center>
+<center><img style="border-style: solid; border-width: 3px;" src="./InstallHHVMSequence600_0007_Layer9.jpg" width="600px" height="466px"></center>
+<center>InstallHHVMSequence600_0007_Layer9.jpg</center>
+
+<p>Scan for the line <strong>IfModule !php7_module</strong> and the next few lines following.</p>
+<center><img style="border-style: solid; border-width: 3px;" src="./InstallHHVMSequence600_0009_Layer10.jpg" width="600px" height="466px"></center>
+<center>InstallHHVMSequence600_0009_Layer10.jpg</center>
+<p>The first such declaration will contain a line with <strong>Define USE_PHP_FPM</strong> and we want to comment that declaration and its contents out or delete it. We can comment each line by using the hash or pound sign <strong>#</strong> at the beginning of each line. Now below the section we have just disabled is a second <strong>IfModule !php7_module</strong> declaration, and just before that section appears is a line <strong>Define USE_HHVM</strong>. We want to comment that <strong>Define USE_HHVM</strong> line out and add this statement within the <strong>IfModule !php7_module</strong> section just below it. Insert this line between the <strong>Action</strong> and <strong>Include</strong> lines so the syntax matches our commented out section above. We want the end results of this set of edits to look like this:</p>
+<center><img style="border-style: solid; border-width: 3px;" src="./InstallHHVMSequence600_0010_Layer11.jpg" width="600px" height="466px"></center>
+<center>InstallHHVMSequence600_0010_Layer11.jpg</center>
+<p>Note the less than and greater than delimiters are replaced with [lt] and [gt].<br>
+<strong># This enables using PHP-FPM when mod_php is disabled<br>
+#[lt]IfModule !php7_module[gt]<br>
+#    Action application/x-httpd-php "/bitnami-error-php-fpm-did-not-handle-the-connection"<br>
+#    Define USE_PHP_FPM<br>
+#    Include "conf/php-fpm-apache.conf"<br>
+#[lt]/IfModule[gt]<br>
+# Comment out this line to enable usign HHVM when mod_php is disabled<br>
+#Define USE_HHVM<br>
+[lt]IfModule !php7_module[gt]<br>
+    Action application/x-httpd-php "/bitnami-error-hhvm-did-not-handle-the-connection"<br>
+    Define USE_HHVM<br>
+    Include "conf/hhvm-apache.conf"<br>
+[lt]/IfModule>[gt]</strong><br>
+When these edits are done save the modified file.</p>
+
+<p>Time for a quick reward! In our Ubuntu console execute the command to start our HHVM stack services
+<strong>root@BobosRevenge:/opt# /opt/hhvm-3.30.12-5/ctlscript.sh start</strong> Now open your <strong>Windows</strong> browser and go to the URL <strong>http://127.0.0.1:8080</strong> where you should be greeted by the default <strong>Bitnami HTML home page</strong>.</p>
+<center><img style="border-style: solid; border-width: 3px;" src="./InstallHHVMSequence600_0011_Layer13.jpg" width="600px" height="466px"></center>
+<center>InstallHHVMSequence600_0011_Layer13.jpg</center>
+
+<p>Finally let's test the <strong>HHVM</strong> machine. Navigate to the <strong>htdocs</strong> folder where our web content is stored with a <strong>cd /opt/hhvm-3.30.12-5/apache2/htdocs</strong> command and invoke the Vim editor to create a new file, <strong>index.php</strong> within that folder. Insert the following lines into the file and save it, and exit the editor. Note the less than and greater than delimiters are replaced with [lt] and [gt].
+<br>
+<strong>[lt]?php<br>
+echo defined('HHVM_VERSION') ? 'Great! You are Using HHVM' : 'Sorry! Not using HHVM';<br>
+phpinfo();<br>
+?[gt]</strong></p>
+<center><img style="border-style: solid; border-width: 3px;" src="./InstallHHVMSequence600_0012_Layer0.jpg" width="600px" height="466px"></center>
+<center>InstallHHVMSequence600_0012_Layer0.jpg</center>
+
+<p>Now return to the <strong>Windows</strong> desktop browser and browse to the URL <strong>http://127.0.0.1:8080/index.php</strong> and you should see this screen.</p>
+<center><img style="border-style: solid; border-width: 3px;" src="./InstallHHVMSequence600_0013_Layer14.jpg" width="600px" height="466px"></center>
+<center>InstallHHVMSequence600_0013_Layer14.jpg</center>
+<p>That completes the installation of the <strong>HHVM stack</strong> with the exception of creating a backup tarball archive and reloading our stack from the tarball. By doing that we always have a known base install to fall back on.  The following three commands should be run in the <strong>Windows Command prompt window</strong> we used previously:<br>
+<strong>C:\WINDOWS\system32>wsl --export Ubuntu-18.04 D:\UbuntuHHVMbase.tar<br>
+C:\WINDOWS\system32>wsl --unregister Ubuntu-18.04<br>
+Unregistering...<br>
+C:\WINDOWS\system32>wsl --import Ubuntu-18.04 D:\UbuntuHHVM d:\UbuntuHHVMbase.tar</strong></p>
+
+<h2>When these operations complete you will have an easy to reload and duplicate Ubuntu 18.04 Linux machine with an Apache, mySQL, and HHVM stack running on Windows 10 using the Windows Subsystem for Linux service.</h2>
+
+<p>If you have another <strong>Windows 10</strong> machine that has the same drive assignments available (we used the <strong>C:</strong> drive and the <strong>D:</strong> drive, so the target has to have two logical disks as well) we can simply copy our tarball to the second machine. Install the <strong>WSL</strong> services as we did here above through the <strong>Settings</strong> dialog and then, in the <strong>Windows Command prompt</strong> on the target machine, we can import our tarball as we did here above using the command<br>
+<strong>C:\WINDOWS\system32>wsl --import Ubuntu-18.04 D:\UbuntuHHVM d:\UbuntuHHVMbase.tar</strong><br>
+Now if we enter this next command we see the result as shown here.<br>
+<strong>C:\WINDOWS\system32>wsl --list --all<br>
+Windows Subsystem for Linux Distributions:<br>
+Ubuntu-18.04 (Default)</strong><br>
+In order to get this newly copied install to run open the <strong>Windows Store</strong> and search for <strong>Ubuntu</strong>, choose the <strong>Ubuntu 18.04 LTS</strong> version, and then click the <strong>Install</strong> button. When the package has downloaded and installed, the button will change to say <strong>Launch</strong>. Click that and it will launch the previously downloaded <strong>LAMH</strong> stack. Pin the button to the taskbar. Now you have a duplicate of your base install on the second machine.</p>
+
+<p>I like writing code and I like learning how to write it. I want to learn HACK. This lets me do that on a local machine.<br><br>
+Information and Knowledge is Power. Power will get you Freedom, and Freedom is not negotiable. I have a huge debt of gratitude for all the tutorials and forums and blogs and Github sites that have helped me learn, and hopefully this tutorial will help me pay the debt forward by helping you.</p>
+</body>
+</html>
