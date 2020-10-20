@@ -12,3 +12,5 @@ I like writing code and I like learning how to write it. I want to learn HACK. T
 Information and Knowledge is Power. Power will get you Freedom, and Freedom is not negotiable. I have a huge debt of gratitude for all the tutorials and forums and blogs and Github sites that have helped me learn, and hopefully this tutorial will help me pay the debt forward by helping you. You should learn to code so that when the battle with the robots begins you will be equipped to be a winner.
 
 The plan is to update and upgrade this setup as we use it. Stay tuned for future developments. C&C are welcomed and suggestions for additions and improvements are cheerfully solicited.
+
+This link will show a youTube video overview of the tutorial: https://youtu.be/3JloPuV67MQ
