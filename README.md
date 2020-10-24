@@ -14,3 +14,5 @@ Information and Knowledge is Power. Power will get you Freedom, and Freedom is n
 The plan is to update and upgrade this setup as we use it. Stay tuned for future developments. C&C are welcomed and suggestions for additions and improvements are cheerfully solicited.
 
 This link will show a youTube video overview of the tutorial: https://youtu.be/3JloPuV67MQ
+
+There is now an additional tutorial segment to set up some folders, files, and users that take advantage of the stack, as well as adding anFTP server.
