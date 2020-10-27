@@ -16,3 +16,5 @@ The plan is to update and upgrade this setup as we use it. Stay tuned for future
 This link will show a youTube video overview of the tutorial: https://youtu.be/3JloPuV67MQ
 
 There is now an additional tutorial segment, SetupPart2, to set up some folders, files, and users that take advantage of the stack, as well as adding an FTP server to give us a familiar way to upload content.
+
+There is now an additional tutorial segment, SetupPart3, which explains how to install a database as our PHP sessions handler in the stack.
