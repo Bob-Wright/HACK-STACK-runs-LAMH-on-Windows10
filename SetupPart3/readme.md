@@ -1,4 +1,5 @@
 HACK-STACK Setup Part 3
+
 Set up a sessions database for our stack.
 
 We want to set up sessions handler database store using our mySQL server for our PHP sessions data.
