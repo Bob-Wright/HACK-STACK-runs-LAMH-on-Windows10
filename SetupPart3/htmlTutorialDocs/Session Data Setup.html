@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>HHVM Stack Tutorial 3</title>
+<style type="text/css" media="screen">
+html {
+    width: 100%;
+    height: 100%;
+	margin: 0;
+	background-color: #fff;
+}
+body {
+    width: 98%;
+    height: 100%;
+	margin: 0;
+	background-color: #fff;
+}
+h1 {
+color: #000;
+font-size: 6vw;
+margin-left: 2vw;
+margin-right: 2vw;
+}
+h2 {
+color: #000;
+font-size: 4vw;
+margin-left: 2vw;
+margin-right: 2vw;
+}
+p {
+color: #000;
+font-size: 2.4vw;
+margin-left: 2vw;
+margin-right: 2vw;
+}
+pre {
+color: #000;
+font-size: 2.2vw;
+margin-left: 2vw;
+margin-right: 2vw;
+}
+</style>
+</head>
+<body>
+<h1>HACK-STACK Setup Part 3</h1><h2>Set up a sessions database for our stack.</h2>
+<p>We want to set up sessions handler database store using our mySQL server for our PHP sessions data. The philosophy of why this might be of benefit is beyond our discussion, but there are various strong reasons that you might want to do this.</p>
+
+<p>This requires a sessions handler function to interface the PHP with the sessions database. We use the <strong>Zebra_Session</strong> code which is described as:<br>
+"A drop-in replacement for PHP's default session handler which stores session data in a MySQL database, providing both better performance and better security and protection against session fixation and session hijacking"<br>
+The code can be found on the <a href="https://github.com/stefangabos/Zebra_Session">Zebra_Session</a> author's page.</p>
+
+<p>It is suggested that you read over the tutorial completely before you begin performing the operations described.</p>
+
+<p>We need to control access to certain folders in such a way as to be consistent with security considerations and the operation of our code. The previous tutorial set these folders up as shown here.</p>
+
+<pre>root@BobosRevenge:/opt/hhvm-3.30.12-5/apache2# ll
+total 8448
+drwxr-xr-x 18 root root       4096 Oct 23 13:13 ./
+drwxr-xr-x 20 root root       4096 Oct 16 20:52 ../
+drwxrwsr-x  4 root www-pub    4096 Oct 23 13:13 Storybook/
+drwxr-xr-x  2 root root       4096 Oct 16 20:49 bin/
+-r-xr--r--  1 root root    8573582 Oct  3 10:09 bnconfig*
+drwxr-xr-x  2 root root       4096 Oct 16 20:49 build/
+drwxr-xr-x  2 root root       4096 Oct 16 20:51 cgi-bin/
+drwxr-xr-x  5 root root       4096 Oct 17 12:52 conf/
+drwxr-xr-x  3 root root       4096 Oct 16 20:49 error/
+drwxrwsr-x  6 root www-pub    4096 Oct 23 17:37 htdocs/
+drwxr-xr-x  3 root root       4096 Oct 16 20:49 icons/
+drwxr-xr-x  2 root root       4096 Oct 16 20:49 include/
+drwxrwsr-x  2 root www-pub    4096 Oct 23 13:05 includes/
+drwxr-xr-x  2 root root       4096 Oct 23 20:55 logs/
+drwxr-xr-x  2 root root       4096 Oct 16 20:49 modules/
+drwxr-xr-x  2 root root       4096 Oct 16 20:49 scripts/
+drwxrwsr-x  2 root www-pub    4096 Oct 23 13:10 session2DB/
+drwxrwsr-x  2 root www-pub    4096 Oct 23 12:45 uploads/
+drwxr-xr-x  3 root root       4096 Oct 16 20:49 var/
+root@BobosRevenge:/opt/hhvm-3.30.12-5/apache2#</pre>
+
+<p>We will need to create or copy/paste a number of files into our stack. Copies of the files are included in this repo.</p>
+
+<p>The first four files will go into our htdocs folder. The first file, dumpSession.php shown here will exercise our session manager functionality when we have it set up.</p>
+<center><img style="border-style: solid; border-width: 3px;" src="./dumpSession_php.jpg" width="1100px" height="1157px"></center>
+<center>dumpSession_php.jpg</center>
+<p>The second file, createZSessionDataBase.php shown here will set up the session manager database.</p>
+<center><img style="border-style: solid; border-width: 3px;" src="./createDataBase_php.jpg" width="792px" height="536px"></center>
+<center>createDataBase_php.jpg</center>
+<p>The third file, createZSessionSQLtable.php shown here will set up the session manager table in the database.</p>
+<center><img style="border-style: solid; border-width: 3px;" src="./createSessionSQLtable_php.jpg" width="1036px" height="707px"></center>
+<center>createSessionSQLtable_php.jpg</center>
+<p>The structure of the table created by createZSessionSQLtable.php is shown here.</p>
+<center><img style="border-style: solid; border-width: 3px;" src="./SessionDataTableStructure.jpg" width="537px" height="207px"></center>
+<center>SessionDataTableStructure.jpg</center>
+<p>The fourth file, ZebraTest.php shown here will test our session manager functionality when we have it set up.</p>
+<center><img style="border-style: solid; border-width: 3px;" src="./ZebraTest_php.jpg" width="1100px" height="647px"></center>
+<center>ZebraTest_php.jpg</center>
+
+
+<p>In addition to these files above in the htdocs folder, we need to create or copy/paste a number of files into our session2DB folder and into the install subfolder within it. Copies of the files are in the session2DB folder in this tutorial, along with a copy of the install subfolder and its files.</p>
+
+<p>Besides the two main "executables", Zebra_Session.php and Zebra_Database.php, there are two other files of importance. One of these files, Zebra.php, is used to invoke the session manager at the beginning of our php programs as we may see here in our dumpSession code.
+<center><img style="border-style: solid; border-width: 3px;" src="./startSessionHeaderForCode.jpg" width="718px" height="265px"></center>
+<center>startSessionHeaderForCode.jpg</center>
+<p>The contents of Zebra.php are shown here next.</p>
+<center><img style="border-style: solid; border-width: 3px;" src="./Zebra_php.JPG" width="873px" height="471px"></center>
+<center>Zebra_php.JPG</center>
+<p>Particularly note the reference to the file linkZSession_DataTable.php which contains our database connection parameters as shown here next.
+<center><img style="border-style: solid; border-width: 3px;" src="./linkZSession_DataTable_php.JPG" width="891px" height="390px"></center>
+<center>linkZSession_DataTable_php.JPG</center>
+
+<p>To use the database session manager simply replace the familiar session_start with an include statement like this, along with such options as the session_name value, so instead of</p>
+<pre>//Start session
+session_name("ComicBuilder");
+session_start;</pre>
+<p>we will now use</p>
+<pre>// Start session
+session_name("ComicBuilder");
+include("/opt/hhvm-3.30.12-5/apache2/session2DB/Zebra.php");</pre>
+
+<p>If we run ZebraTest.php from our browser at the URL 127.0.0.1:8080/ZebraTest.php we will see this first screen shown here.</P>
+<center><img style="border-style: solid; border-width: 3px;" src="./ZebraTestScreen1.JPG" width="740px" height="294px"></center>
+<center>ZebraTestScreen1.JPG</center>
+
+<p>If we refresh the browser as this first screen suggests we will then see this second screen.</p>
+<center><img style="border-style: solid; border-width: 3px;" src="./ZebraTestScreen2.JPG" width="762px" height="342px"></center>
+<center>ZebraTestScreen2.JPG</center>
+
+<p>More information can be obtained by running the dumpSession.php script mentioned above which results in a fairly large amount of data output so it is included as a text file dumpSessionOutput.txt. For extra credit you can use these following lines in a php scrpt modification to our index.php file in the htdocs folder. (A line break was inserted here after the colon in the branch section of the defined statement for the PDF formatting.) I named this code index2.php. The phpinfo results will  then reflect the session handler usage.</p>
+<pre>// Start session
+session_name("ComicBuilder");
+include("/opt/hhvm-3.30.12-5/apache2/session2DB/Zebra.php");
+echo defined('HHVM_VERSION') ? 'Great! You are Using HHVM' :
+ 'Sorry! Not using HHVM';
+phpinfo();</pre>
+
+<h2>We now have a database session handler for our PHP code installed on our LAMH stack.</h2>
+
+<p>Another thing we can do is to download and install the <a href="https://dev.mysql.com/downloads/workbench/">mySQL Workbench</a> tool from the mySQL developer site. You will need to provide the server name localhost or the ip (I used 127.0.0.1), the default user name is root, and the password is Hacker. The port number is the usual 3306. Once it is set up you can connect from your Windows machine and obtain a screen like this shown next. (I made a couple of efforts to install phpmyadmin on the stack but was unsuccessful at that effort.)</p>
+<center><img style="border-style: solid; border-width: 3px;" src="./mySQLWorkbenchScreenshot.JPG" width="1020px" height="861px"></center>
+<center>mySQLWorkbenchScreenshot.JPG</center>
+
+<p>The final step we should take is to execute these commands in our Windows Administrator Command prompt to back up the changes we have made.</p>
+<pre>Microsoft Windows [Version 10.0.19041.572]
+(c) 2020 Microsoft Corporation. All rights reserved.
+C:\WINDOWS\system32>wsl --list --all
+Windows Subsystem for Linux Distributions:
+Ubuntu-18.04 (Default)
+C:\WINDOWS\system32>wsl --export Ubuntu-18.04 D:/UbuntuHHVMbase.tar
+C:\WINDOWS\system32></pre>
+
+<p>Next time we'll use more of this files-folders-users hierarchy along with some database in our LAMH stack and web sites.</p>
+</body>
+</html>
