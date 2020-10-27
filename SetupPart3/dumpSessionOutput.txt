@@ -1,0 +1,632 @@
+dumpSession
+List Cookie Parameters
+Array
+(
+    [lifetime] => 0
+    [path] => /
+    [domain] => 
+    [secure] => 
+    [httponly] => 1
+)
+List All Session Variables
+Array
+(
+    [GLOBALS] => Array
+        (
+            [session] => Zebra_Session Object
+                (
+                    [flashdata:Zebra_Session:private] => Array
+                        (
+                        )
+
+                    [flashdata_varname:Zebra_Session:private] => _zebra_session_flashdata_ec3asbuiad
+                    [session_lifetime:Zebra_Session:private] => 1440
+                    [link:Zebra_Session:private] => mysqli Object
+                        (
+                            [__connection:mysqli:private] => Resource id #6
+                        )
+
+                    [lock_timeout:Zebra_Session:private] => 60
+                    [lock_to_ip:Zebra_Session:private] => 
+                    [lock_to_user_agent:Zebra_Session:private] => 1
+                    [table_name:Zebra_Session:private] => `session_data`
+                    [security_code] => A_c0dE_4_sEcUr1tY
+                    [session_lock] => session_98e8dcf66a5613cf60911196918eec2cf23f3ac7
+                )
+
+            [HTTP_RAW_POST_DATA] => 
+            [dbUsername] => root
+            [dbHost] => localhost
+            [_REQUEST] => Array
+                (
+                    [PHPSESSID] => 6ab6ee361d2069498b857cd0ad0ee400
+                    [ComicBuilder] => 202f0ff541c4f40f6e49e79d8f8f910a
+                )
+
+            [dbPassword] => Hacker
+            [_COOKIE] => Array
+                (
+                    [PHPSESSID] => 6ab6ee361d2069498b857cd0ad0ee400
+                    [ComicBuilder] => 202f0ff541c4f40f6e49e79d8f8f910a
+                )
+
+            [argv] => 
+            [_SERVER] => Array
+                (
+                    [REQUEST_START_TIME] => 1603750978
+                    [REQUEST_TIME] => 1603750978
+                    [REQUEST_TIME_FLOAT] => 1603750978.9626
+                    [HTTP_ACCEPT_LANGUAGE] => en-US,en;q=0.9
+                    [HTTP_COOKIE] => PHPSESSID=6ab6ee361d2069498b857cd0ad0ee400; ComicBuilder=202f0ff541c4f40f6e49e79d8f8f910a
+                    [HTTP_SEC_FETCH_MODE] => navigate
+                    [HTTP_SEC_FETCH_USER] => ?1
+                    [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+                    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+                    [HTTP_SEC_FETCH_SITE] => none
+                    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+                    [HTTP_SEC_FETCH_DEST] => document
+                    [HTTP_CONNECTION] => keep-alive
+                    [HTTP_HOST] => 127.0.0.1:8080
+                    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36
+                    [GATEWAY_INTERFACE] => CGI/1.1
+                    [SERVER_ADDR] => 127.0.0.1
+                    [SERVER_NAME] => 127.0.0.1
+                    [SERVER_PORT] => 8080
+                    [SERVER_SOFTWARE] => Apache
+                    [SERVER_PROTOCOL] => HTTP/1.1
+                    [SERVER_ADMIN] => you@example.com
+                    [SERVER_SIGNATURE] => 
+                    [REMOTE_ADDR] => 127.0.0.1
+                    [LD_LIBRARY_PATH] => /opt/hhvm-3.30.12-5/sqlite/lib:/opt/hhvm-3.30.12-5/mysql/lib:/opt/hhvm-3.30.12-5/apache2/lib:/opt/hhvm-3.30.12-5/common/lib:/opt/hhvm-3.30.12-5/sqlite/lib:/opt/hhvm-3.30.12-5/mysql/lib:/opt/hhvm-3.30.12-5/apache2/lib:/opt/hhvm-3.30.12-5/common/lib:/opt/hhvm-3.30.12-5/git/lib:/opt/hhvm-3.30.12-5/varnish/lib:/opt/hhvm-3.30.12-5/varnish/lib/varnish:/opt/hhvm-3.30.12-5/varnish/lib/varnish/vmods:/opt/hhvm-3.30.12-5/sqlite/lib:/opt/hhvm-3.30.12-5/mysql/lib:/opt/hhvm-3.30.12-5/apache2/lib:/opt/hhvm-3.30.12-5/common/lib:/opt/hhvm-3.30.12-5/common/lib64
+                    [SCRIPT_FILENAME] => /opt/hhvm-3.30.12-5/apache2/htdocs/dumpSession.php
+                    [SCRIPT_NAME] => /dumpSession.php
+                    [CONTEXT_PREFIX] => 
+                    [REMOTE_PORT] => 37946
+                    [REQUEST_URI] => /dumpSession.php
+                    [QUERY_STRING] => 
+                    [REQUEST_METHOD] => GET
+                    [REQUEST_SCHEME] => http
+                    [CONTEXT_DOCUMENT_ROOT] => /opt/hhvm-3.30.12-5/apache2/htdocs
+                    [PATH] => /opt/hhvm-3.30.12-5/git/bin:/opt/hhvm-3.30.12-5/varnish/bin:/opt/hhvm-3.30.12-5/sqlite/bin:/opt/hhvm-3.30.12-5/hhvm/bin:/opt/hhvm-3.30.12-5/php/bin:/opt/hhvm-3.30.12-5/mysql/bin:/opt/hhvm-3.30.12-5/letsencrypt/:/opt/hhvm-3.30.12-5/apache2/bin:/opt/hhvm-3.30.12-5/common/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.Ubuntu18.04onWindows_1804.2020.824.0_x64__79rhkp1fndgsc:/mnt/c/Perl64/site/bin:/mnt/c/Perl64/bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Intel/iCLS Client/:/mnt/c/Program Files/Intel/iCLS Client/:/mnt/c/Program Files/Common Files/Microsoft Shared/Windows Live:/mnt/c/Program Files (x86)/Common Files/Microsoft Shared/Windows Live:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files/V64:/mnt/c/4NT:/mnt/c/CMS/bin:/mnt/c/Program Files (x86)/QuickTime/QTSystem/:/mnt/c/ProgramData/Oracle/Java/javapath:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/d/PHP:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/MinGW/bin:/mnt/c/Program Files (x86)/Windows Live/Shared:/mnt/c/ProgramData/chocolatey/bin:/mnt/d/composer:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files (x86)/AOMEI Backupper:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/PuTTY/:/mnt/c/Users/Wright/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Wright/AppData/Roaming/Composer/vendor/bin:/mnt/c/Users/Wright/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/Wright/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Wright/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin
+                    [DOCUMENT_ROOT] => /opt/hhvm-3.30.12-5/apache2/htdocs
+                    [SCRIPT_URL] => /dumpSession.php
+                    [SCRIPT_URI] => http://127.0.0.1:8080/dumpSession.php
+                    [PHP_SELF] => /dumpSession.php
+                    [HTTPS] => 
+                    [argv] => Array
+                        (
+                            [0] => 
+                        )
+
+                    [argc] => 1
+                    [THREAD_TYPE] => Web Request
+                )
+
+            [dbName] => Session
+            [_POST] => Array
+                (
+                )
+
+            [_GET] => Array
+                (
+                )
+
+            [argc] => 
+            [link] => mysqli Object
+                (
+                    [__connection:mysqli:private] => Resource id #6
+                )
+
+            [GLOBALS] => Array
+                (
+                    [session] => Zebra_Session Object
+                        (
+                            [flashdata:Zebra_Session:private] => Array
+                                (
+                                )
+
+                            [flashdata_varname:Zebra_Session:private] => _zebra_session_flashdata_ec3asbuiad
+                            [session_lifetime:Zebra_Session:private] => 1440
+                            [link:Zebra_Session:private] => mysqli Object
+                                (
+                                    [__connection:mysqli:private] => Resource id #6
+                                )
+
+                            [lock_timeout:Zebra_Session:private] => 60
+                            [lock_to_ip:Zebra_Session:private] => 
+                            [lock_to_user_agent:Zebra_Session:private] => 1
+                            [table_name:Zebra_Session:private] => `session_data`
+                            [security_code] => A_c0dE_4_sEcUr1tY
+                            [session_lock] => session_98e8dcf66a5613cf60911196918eec2cf23f3ac7
+                        )
+
+                    [HTTP_RAW_POST_DATA] => 
+                    [dbUsername] => root
+                    [dbHost] => localhost
+                    [_REQUEST] => Array
+                        (
+                            [PHPSESSID] => 6ab6ee361d2069498b857cd0ad0ee400
+                            [ComicBuilder] => 202f0ff541c4f40f6e49e79d8f8f910a
+                        )
+
+                    [dbPassword] => Hacker
+                    [_COOKIE] => Array
+                        (
+                            [PHPSESSID] => 6ab6ee361d2069498b857cd0ad0ee400
+                            [ComicBuilder] => 202f0ff541c4f40f6e49e79d8f8f910a
+                        )
+
+                    [argv] => 
+                    [_SERVER] => Array
+                        (
+                            [REQUEST_START_TIME] => 1603750978
+                            [REQUEST_TIME] => 1603750978
+                            [REQUEST_TIME_FLOAT] => 1603750978.9626
+                            [HTTP_ACCEPT_LANGUAGE] => en-US,en;q=0.9
+                            [HTTP_COOKIE] => PHPSESSID=6ab6ee361d2069498b857cd0ad0ee400; ComicBuilder=202f0ff541c4f40f6e49e79d8f8f910a
+                            [HTTP_SEC_FETCH_MODE] => navigate
+                            [HTTP_SEC_FETCH_USER] => ?1
+                            [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+                            [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+                            [HTTP_SEC_FETCH_SITE] => none
+                            [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+                            [HTTP_SEC_FETCH_DEST] => document
+                            [HTTP_CONNECTION] => keep-alive
+                            [HTTP_HOST] => 127.0.0.1:8080
+                            [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36
+                            [GATEWAY_INTERFACE] => CGI/1.1
+                            [SERVER_ADDR] => 127.0.0.1
+                            [SERVER_NAME] => 127.0.0.1
+                            [SERVER_PORT] => 8080
+                            [SERVER_SOFTWARE] => Apache
+                            [SERVER_PROTOCOL] => HTTP/1.1
+                            [SERVER_ADMIN] => you@example.com
+                            [SERVER_SIGNATURE] => 
+                            [REMOTE_ADDR] => 127.0.0.1
+                            [LD_LIBRARY_PATH] => /opt/hhvm-3.30.12-5/sqlite/lib:/opt/hhvm-3.30.12-5/mysql/lib:/opt/hhvm-3.30.12-5/apache2/lib:/opt/hhvm-3.30.12-5/common/lib:/opt/hhvm-3.30.12-5/sqlite/lib:/opt/hhvm-3.30.12-5/mysql/lib:/opt/hhvm-3.30.12-5/apache2/lib:/opt/hhvm-3.30.12-5/common/lib:/opt/hhvm-3.30.12-5/git/lib:/opt/hhvm-3.30.12-5/varnish/lib:/opt/hhvm-3.30.12-5/varnish/lib/varnish:/opt/hhvm-3.30.12-5/varnish/lib/varnish/vmods:/opt/hhvm-3.30.12-5/sqlite/lib:/opt/hhvm-3.30.12-5/mysql/lib:/opt/hhvm-3.30.12-5/apache2/lib:/opt/hhvm-3.30.12-5/common/lib:/opt/hhvm-3.30.12-5/common/lib64
+                            [SCRIPT_FILENAME] => /opt/hhvm-3.30.12-5/apache2/htdocs/dumpSession.php
+                            [SCRIPT_NAME] => /dumpSession.php
+                            [CONTEXT_PREFIX] => 
+                            [REMOTE_PORT] => 37946
+                            [REQUEST_URI] => /dumpSession.php
+                            [QUERY_STRING] => 
+                            [REQUEST_METHOD] => GET
+                            [REQUEST_SCHEME] => http
+                            [CONTEXT_DOCUMENT_ROOT] => /opt/hhvm-3.30.12-5/apache2/htdocs
+                            [PATH] => /opt/hhvm-3.30.12-5/git/bin:/opt/hhvm-3.30.12-5/varnish/bin:/opt/hhvm-3.30.12-5/sqlite/bin:/opt/hhvm-3.30.12-5/hhvm/bin:/opt/hhvm-3.30.12-5/php/bin:/opt/hhvm-3.30.12-5/mysql/bin:/opt/hhvm-3.30.12-5/letsencrypt/:/opt/hhvm-3.30.12-5/apache2/bin:/opt/hhvm-3.30.12-5/common/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.Ubuntu18.04onWindows_1804.2020.824.0_x64__79rhkp1fndgsc:/mnt/c/Perl64/site/bin:/mnt/c/Perl64/bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Intel/iCLS Client/:/mnt/c/Program Files/Intel/iCLS Client/:/mnt/c/Program Files/Common Files/Microsoft Shared/Windows Live:/mnt/c/Program Files (x86)/Common Files/Microsoft Shared/Windows Live:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files/V64:/mnt/c/4NT:/mnt/c/CMS/bin:/mnt/c/Program Files (x86)/QuickTime/QTSystem/:/mnt/c/ProgramData/Oracle/Java/javapath:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/d/PHP:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/MinGW/bin:/mnt/c/Program Files (x86)/Windows Live/Shared:/mnt/c/ProgramData/chocolatey/bin:/mnt/d/composer:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files (x86)/AOMEI Backupper:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/PuTTY/:/mnt/c/Users/Wright/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Wright/AppData/Roaming/Composer/vendor/bin:/mnt/c/Users/Wright/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/Wright/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Wright/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin
+                            [DOCUMENT_ROOT] => /opt/hhvm-3.30.12-5/apache2/htdocs
+                            [SCRIPT_URL] => /dumpSession.php
+                            [SCRIPT_URI] => http://127.0.0.1:8080/dumpSession.php
+                            [PHP_SELF] => /dumpSession.php
+                            [HTTPS] => 
+                            [argv] => Array
+                                (
+                                    [0] => 
+                                )
+
+                            [argc] => 1
+                            [THREAD_TYPE] => Web Request
+                        )
+
+                    [dbName] => Session
+                    [_POST] => Array
+                        (
+                        )
+
+                    [_GET] => Array
+                        (
+                        )
+
+                    [argc] => 
+                    [link] => mysqli Object
+                        (
+                            [__connection:mysqli:private] => Resource id #6
+                        )
+
+                    [GLOBALS] => Array
+ *RECURSION*
+                    [_SESSION] => Array
+                        (
+                        )
+
+                    [_FILES] => Array
+                        (
+                        )
+
+                    [_ENV] => Array
+                        (
+                            [LESSOPEN] => | /usr/bin/lesspipe %s
+                            [CURL_CA_BUNDLE] => /opt/hhvm-3.30.12-5/common/openssl/certs/curl-ca-bundle.crt
+                            [USER] => root
+                            [GIT_TEMPLATE_DIR] => /opt/hhvm-3.30.12-5/git/share/git-core/templates
+                            [SASL_CONF_PATH] => /opt/hhvm-3.30.12-5/common/etc
+                            [GIT_EXEC_PATH] => /opt/hhvm-3.30.12-5/git/libexec/git-core/
+                            [FONTCONFIG_PATH] => /opt/hhvm-3.30.12-5/common/etc/fonts
+                            [SASL_PATH] => /opt/hhvm-3.30.12-5/common/lib/sasl2
+                            [CXXFLAGS] => -I/opt/hhvm-3.30.12-5/common/include -I/opt/hhvm-3.30.12-5/common/include 
+                            [SHLVL] => 1
+                            [LD_LIBRARY_PATH] => /opt/hhvm-3.30.12-5/sqlite/lib:/opt/hhvm-3.30.12-5/mysql/lib:/opt/hhvm-3.30.12-5/apache2/lib:/opt/hhvm-3.30.12-5/common/lib:/opt/hhvm-3.30.12-5/sqlite/lib:/opt/hhvm-3.30.12-5/mysql/lib:/opt/hhvm-3.30.12-5/apache2/lib:/opt/hhvm-3.30.12-5/common/lib:/opt/hhvm-3.30.12-5/git/lib:/opt/hhvm-3.30.12-5/varnish/lib:/opt/hhvm-3.30.12-5/varnish/lib/varnish:/opt/hhvm-3.30.12-5/varnish/lib/varnish/vmods:/opt/hhvm-3.30.12-5/sqlite/lib:/opt/hhvm-3.30.12-5/mysql/lib:/opt/hhvm-3.30.12-5/apache2/lib:/opt/hhvm-3.30.12-5/common/lib:/opt/hhvm-3.30.12-5/common/lib64
+                            [GIT_SSL_CAINFO] => /opt/hhvm-3.30.12-5/common/openssl/certs/curl-ca-bundle.crt
+                            [LDAPCONF] => /opt/hhvm-3.30.12-5/common/etc/openldap/ldap.conf
+                            [HOME] => /root
+                            [OLDPWD] => /root
+                            [TERMINFO] => /opt/hhvm-3.30.12-5/common/share/terminfo
+                            [LDFLAGS] => -L/opt/hhvm-3.30.12-5/common/lib -L/opt/hhvm-3.30.12-5/common/lib 
+                            [SSL_CERT_FILE] => /opt/hhvm-3.30.12-5/common/openssl/certs/curl-ca-bundle.crt
+                            [OPENSSL_ENGINES] => /opt/hhvm-3.30.12-5/common/lib/engines
+                            [WSL_DISTRO_NAME] => Ubuntu-18.04
+                            [COMPOSER_HOME] => /opt/hhvm-3.30.12-5/php/composer
+                            [LOGNAME] => root
+                            [FREETDSLOCALES] => /opt/hhvm-3.30.12-5/common/etc/locales.conf
+                            [WSL_INTEROP] => /run/WSL/9_interop
+                            [NAME] => BobosRevenge
+                            [_] => /opt/hhvm-3.30.12-5/ctlscript.sh
+                            [MAGICK_CONFIGURE_PATH] => /opt/hhvm-3.30.12-5/common/lib/ImageMagick-6.9.8/config-Q16:/opt/hhvm-3.30.12-5/common/
+                            [OPENSSL_CONF] => /opt/hhvm-3.30.12-5/common/openssl/openssl.cnf
+                            [PKG_CONFIG_PATH] => /opt/hhvm-3.30.12-5/common/lib64/pkgconfig:/opt/hhvm-3.30.12-5/common/lib/pkgconfig
+                            [TERM] => xterm-256color
+                            [PATH] => /opt/hhvm-3.30.12-5/git/bin:/opt/hhvm-3.30.12-5/varnish/bin:/opt/hhvm-3.30.12-5/sqlite/bin:/opt/hhvm-3.30.12-5/hhvm/bin:/opt/hhvm-3.30.12-5/php/bin:/opt/hhvm-3.30.12-5/mysql/bin:/opt/hhvm-3.30.12-5/letsencrypt/:/opt/hhvm-3.30.12-5/apache2/bin:/opt/hhvm-3.30.12-5/common/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.Ubuntu18.04onWindows_1804.2020.824.0_x64__79rhkp1fndgsc:/mnt/c/Perl64/site/bin:/mnt/c/Perl64/bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Intel/iCLS Client/:/mnt/c/Program Files/Intel/iCLS Client/:/mnt/c/Program Files/Common Files/Microsoft Shared/Windows Live:/mnt/c/Program Files (x86)/Common Files/Microsoft Shared/Windows Live:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files/V64:/mnt/c/4NT:/mnt/c/CMS/bin:/mnt/c/Program Files (x86)/QuickTime/QTSystem/:/mnt/c/ProgramData/Oracle/Java/javapath:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/d/PHP:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/MinGW/bin:/mnt/c/Program Files (x86)/Windows Live/Shared:/mnt/c/ProgramData/chocolatey/bin:/mnt/d/composer:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files (x86)/AOMEI Backupper:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/PuTTY/:/mnt/c/Users/Wright/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Wright/AppData/Roaming/Composer/vendor/bin:/mnt/c/Users/Wright/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/Wright/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Wright/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin
+                            [CFLAGS] => -I/opt/hhvm-3.30.12-5/common/include/ImageMagick -I/opt/hhvm-3.30.12-5/common/include -I/opt/hhvm-3.30.12-5/common/include/ImageMagick -I/opt/hhvm-3.30.12-5/common/include 
+                            [MAGICK_CODER_MODULE_PATH] => /opt/hhvm-3.30.12-5/common/lib/ImageMagick-6.9.8/modules-Q16/coders
+                            [LANG] => C.UTF-8
+                            [MAGICK_HOME] => /opt/hhvm-3.30.12-5/common
+                            [LS_COLORS] => rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+                            [SHELL] => /bin/bash
+                            [FREETDSCONF] => /opt/hhvm-3.30.12-5/common/etc/freetds.conf
+                            [LESSCLOSE] => /usr/bin/lesspipe %s %s
+                            [PWD] => /opt/hhvm-3.30.12-5
+                            [XDG_DATA_DIRS] => /usr/local/share:/usr/share:/var/lib/snapd/desktop
+                            [PHP_PATH] => /opt/hhvm-3.30.12-5/php/bin/php
+                            [HOSTTYPE] => x86_64
+                            [WSLENV] => 
+                            [GLIBCPP_FORCE_NEW] => 1
+                            [GLIBCXX_FORCE_NEW] => 1
+                            [UNW_RBP_ALWAYS_VALID] => 1
+                            [HPHP] => 1
+                            [HHVM] => 1
+                            [HHVM_JIT] => 1
+                            [HHVM_ARCH] => x64
+                            [HPHP_SERVER] => 1
+                            [HPHP_HOTPROFILER] => 1
+                            [REMOTE_ADDR] => 127.0.0.1
+                            [SERVER_PORT] => 8080
+                            [SERVER_SOFTWARE] => Apache
+                            [HTTP_ACCEPT_LANGUAGE] => en-US,en;q=0.9
+                            [HTTP_COOKIE] => PHPSESSID=6ab6ee361d2069498b857cd0ad0ee400; ComicBuilder=202f0ff541c4f40f6e49e79d8f8f910a
+                            [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36
+                            [HTTP_SEC_FETCH_USER] => ?1
+                            [SCRIPT_FILENAME] => proxy:fcgi://www-hhvm/opt/hhvm-3.30.12-5/apache2/htdocs/dumpSession.php
+                            [SCRIPT_NAME] => /dumpSession.php
+                            [SERVER_NAME] => 127.0.0.1
+                            [CONTEXT_PREFIX] => 
+                            [REMOTE_PORT] => 37946
+                            [GATEWAY_INTERFACE] => CGI/1.1
+                            [REQUEST_URI] => /dumpSession.php
+                            [QUERY_STRING] => 
+                            [SERVER_PROTOCOL] => HTTP/1.1
+                            [SERVER_SIGNATURE] => 
+                            [HTTP_SEC_FETCH_SITE] => none
+                            [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+                            [HTTP_SEC_FETCH_DEST] => document
+                            [HTTP_SEC_FETCH_MODE] => navigate
+                            [SERVER_ADMIN] => you@example.com
+                            [REQUEST_METHOD] => GET
+                            [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+                            [REQUEST_SCHEME] => http
+                            [CONTEXT_DOCUMENT_ROOT] => /opt/hhvm-3.30.12-5/apache2/htdocs
+                            [SERVER_ADDR] => 127.0.0.1
+                            [DOCUMENT_ROOT] => /opt/hhvm-3.30.12-5/apache2/htdocs
+                            [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+                            [HTTP_CONNECTION] => keep-alive
+                            [HTTP_HOST] => 127.0.0.1:8080
+                        )
+
+                )
+
+            [_SESSION] => Array
+                (
+                )
+
+            [_FILES] => Array
+                (
+                )
+
+            [_ENV] => Array
+                (
+                    [LESSOPEN] => | /usr/bin/lesspipe %s
+                    [CURL_CA_BUNDLE] => /opt/hhvm-3.30.12-5/common/openssl/certs/curl-ca-bundle.crt
+                    [USER] => root
+                    [GIT_TEMPLATE_DIR] => /opt/hhvm-3.30.12-5/git/share/git-core/templates
+                    [SASL_CONF_PATH] => /opt/hhvm-3.30.12-5/common/etc
+                    [GIT_EXEC_PATH] => /opt/hhvm-3.30.12-5/git/libexec/git-core/
+                    [FONTCONFIG_PATH] => /opt/hhvm-3.30.12-5/common/etc/fonts
+                    [SASL_PATH] => /opt/hhvm-3.30.12-5/common/lib/sasl2
+                    [CXXFLAGS] => -I/opt/hhvm-3.30.12-5/common/include -I/opt/hhvm-3.30.12-5/common/include 
+                    [SHLVL] => 1
+                    [LD_LIBRARY_PATH] => /opt/hhvm-3.30.12-5/sqlite/lib:/opt/hhvm-3.30.12-5/mysql/lib:/opt/hhvm-3.30.12-5/apache2/lib:/opt/hhvm-3.30.12-5/common/lib:/opt/hhvm-3.30.12-5/sqlite/lib:/opt/hhvm-3.30.12-5/mysql/lib:/opt/hhvm-3.30.12-5/apache2/lib:/opt/hhvm-3.30.12-5/common/lib:/opt/hhvm-3.30.12-5/git/lib:/opt/hhvm-3.30.12-5/varnish/lib:/opt/hhvm-3.30.12-5/varnish/lib/varnish:/opt/hhvm-3.30.12-5/varnish/lib/varnish/vmods:/opt/hhvm-3.30.12-5/sqlite/lib:/opt/hhvm-3.30.12-5/mysql/lib:/opt/hhvm-3.30.12-5/apache2/lib:/opt/hhvm-3.30.12-5/common/lib:/opt/hhvm-3.30.12-5/common/lib64
+                    [GIT_SSL_CAINFO] => /opt/hhvm-3.30.12-5/common/openssl/certs/curl-ca-bundle.crt
+                    [LDAPCONF] => /opt/hhvm-3.30.12-5/common/etc/openldap/ldap.conf
+                    [HOME] => /root
+                    [OLDPWD] => /root
+                    [TERMINFO] => /opt/hhvm-3.30.12-5/common/share/terminfo
+                    [LDFLAGS] => -L/opt/hhvm-3.30.12-5/common/lib -L/opt/hhvm-3.30.12-5/common/lib 
+                    [SSL_CERT_FILE] => /opt/hhvm-3.30.12-5/common/openssl/certs/curl-ca-bundle.crt
+                    [OPENSSL_ENGINES] => /opt/hhvm-3.30.12-5/common/lib/engines
+                    [WSL_DISTRO_NAME] => Ubuntu-18.04
+                    [COMPOSER_HOME] => /opt/hhvm-3.30.12-5/php/composer
+                    [LOGNAME] => root
+                    [FREETDSLOCALES] => /opt/hhvm-3.30.12-5/common/etc/locales.conf
+                    [WSL_INTEROP] => /run/WSL/9_interop
+                    [NAME] => BobosRevenge
+                    [_] => /opt/hhvm-3.30.12-5/ctlscript.sh
+                    [MAGICK_CONFIGURE_PATH] => /opt/hhvm-3.30.12-5/common/lib/ImageMagick-6.9.8/config-Q16:/opt/hhvm-3.30.12-5/common/
+                    [OPENSSL_CONF] => /opt/hhvm-3.30.12-5/common/openssl/openssl.cnf
+                    [PKG_CONFIG_PATH] => /opt/hhvm-3.30.12-5/common/lib64/pkgconfig:/opt/hhvm-3.30.12-5/common/lib/pkgconfig
+                    [TERM] => xterm-256color
+                    [PATH] => /opt/hhvm-3.30.12-5/git/bin:/opt/hhvm-3.30.12-5/varnish/bin:/opt/hhvm-3.30.12-5/sqlite/bin:/opt/hhvm-3.30.12-5/hhvm/bin:/opt/hhvm-3.30.12-5/php/bin:/opt/hhvm-3.30.12-5/mysql/bin:/opt/hhvm-3.30.12-5/letsencrypt/:/opt/hhvm-3.30.12-5/apache2/bin:/opt/hhvm-3.30.12-5/common/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.Ubuntu18.04onWindows_1804.2020.824.0_x64__79rhkp1fndgsc:/mnt/c/Perl64/site/bin:/mnt/c/Perl64/bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Intel/iCLS Client/:/mnt/c/Program Files/Intel/iCLS Client/:/mnt/c/Program Files/Common Files/Microsoft Shared/Windows Live:/mnt/c/Program Files (x86)/Common Files/Microsoft Shared/Windows Live:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files/V64:/mnt/c/4NT:/mnt/c/CMS/bin:/mnt/c/Program Files (x86)/QuickTime/QTSystem/:/mnt/c/ProgramData/Oracle/Java/javapath:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/d/PHP:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/MinGW/bin:/mnt/c/Program Files (x86)/Windows Live/Shared:/mnt/c/ProgramData/chocolatey/bin:/mnt/d/composer:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files (x86)/AOMEI Backupper:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/PuTTY/:/mnt/c/Users/Wright/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Wright/AppData/Roaming/Composer/vendor/bin:/mnt/c/Users/Wright/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/Wright/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Wright/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin
+                    [CFLAGS] => -I/opt/hhvm-3.30.12-5/common/include/ImageMagick -I/opt/hhvm-3.30.12-5/common/include -I/opt/hhvm-3.30.12-5/common/include/ImageMagick -I/opt/hhvm-3.30.12-5/common/include 
+                    [MAGICK_CODER_MODULE_PATH] => /opt/hhvm-3.30.12-5/common/lib/ImageMagick-6.9.8/modules-Q16/coders
+                    [LANG] => C.UTF-8
+                    [MAGICK_HOME] => /opt/hhvm-3.30.12-5/common
+                    [LS_COLORS] => rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+                    [SHELL] => /bin/bash
+                    [FREETDSCONF] => /opt/hhvm-3.30.12-5/common/etc/freetds.conf
+                    [LESSCLOSE] => /usr/bin/lesspipe %s %s
+                    [PWD] => /opt/hhvm-3.30.12-5
+                    [XDG_DATA_DIRS] => /usr/local/share:/usr/share:/var/lib/snapd/desktop
+                    [PHP_PATH] => /opt/hhvm-3.30.12-5/php/bin/php
+                    [HOSTTYPE] => x86_64
+                    [WSLENV] => 
+                    [GLIBCPP_FORCE_NEW] => 1
+                    [GLIBCXX_FORCE_NEW] => 1
+                    [UNW_RBP_ALWAYS_VALID] => 1
+                    [HPHP] => 1
+                    [HHVM] => 1
+                    [HHVM_JIT] => 1
+                    [HHVM_ARCH] => x64
+                    [HPHP_SERVER] => 1
+                    [HPHP_HOTPROFILER] => 1
+                    [REMOTE_ADDR] => 127.0.0.1
+                    [SERVER_PORT] => 8080
+                    [SERVER_SOFTWARE] => Apache
+                    [HTTP_ACCEPT_LANGUAGE] => en-US,en;q=0.9
+                    [HTTP_COOKIE] => PHPSESSID=6ab6ee361d2069498b857cd0ad0ee400; ComicBuilder=202f0ff541c4f40f6e49e79d8f8f910a
+                    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36
+                    [HTTP_SEC_FETCH_USER] => ?1
+                    [SCRIPT_FILENAME] => proxy:fcgi://www-hhvm/opt/hhvm-3.30.12-5/apache2/htdocs/dumpSession.php
+                    [SCRIPT_NAME] => /dumpSession.php
+                    [SERVER_NAME] => 127.0.0.1
+                    [CONTEXT_PREFIX] => 
+                    [REMOTE_PORT] => 37946
+                    [GATEWAY_INTERFACE] => CGI/1.1
+                    [REQUEST_URI] => /dumpSession.php
+                    [QUERY_STRING] => 
+                    [SERVER_PROTOCOL] => HTTP/1.1
+                    [SERVER_SIGNATURE] => 
+                    [HTTP_SEC_FETCH_SITE] => none
+                    [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+                    [HTTP_SEC_FETCH_DEST] => document
+                    [HTTP_SEC_FETCH_MODE] => navigate
+                    [SERVER_ADMIN] => you@example.com
+                    [REQUEST_METHOD] => GET
+                    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+                    [REQUEST_SCHEME] => http
+                    [CONTEXT_DOCUMENT_ROOT] => /opt/hhvm-3.30.12-5/apache2/htdocs
+                    [SERVER_ADDR] => 127.0.0.1
+                    [DOCUMENT_ROOT] => /opt/hhvm-3.30.12-5/apache2/htdocs
+                    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+                    [HTTP_CONNECTION] => keep-alive
+                    [HTTP_HOST] => 127.0.0.1:8080
+                )
+
+        )
+
+    [HTTP_RAW_POST_DATA] => 
+    [_COOKIE] => Array
+        (
+            [PHPSESSID] => 6ab6ee361d2069498b857cd0ad0ee400
+            [ComicBuilder] => 202f0ff541c4f40f6e49e79d8f8f910a
+        )
+
+    [_ENV] => Array
+        (
+            [LESSOPEN] => | /usr/bin/lesspipe %s
+            [CURL_CA_BUNDLE] => /opt/hhvm-3.30.12-5/common/openssl/certs/curl-ca-bundle.crt
+            [USER] => root
+            [GIT_TEMPLATE_DIR] => /opt/hhvm-3.30.12-5/git/share/git-core/templates
+            [SASL_CONF_PATH] => /opt/hhvm-3.30.12-5/common/etc
+            [GIT_EXEC_PATH] => /opt/hhvm-3.30.12-5/git/libexec/git-core/
+            [FONTCONFIG_PATH] => /opt/hhvm-3.30.12-5/common/etc/fonts
+            [SASL_PATH] => /opt/hhvm-3.30.12-5/common/lib/sasl2
+            [CXXFLAGS] => -I/opt/hhvm-3.30.12-5/common/include -I/opt/hhvm-3.30.12-5/common/include 
+            [SHLVL] => 1
+            [LD_LIBRARY_PATH] => /opt/hhvm-3.30.12-5/sqlite/lib:/opt/hhvm-3.30.12-5/mysql/lib:/opt/hhvm-3.30.12-5/apache2/lib:/opt/hhvm-3.30.12-5/common/lib:/opt/hhvm-3.30.12-5/sqlite/lib:/opt/hhvm-3.30.12-5/mysql/lib:/opt/hhvm-3.30.12-5/apache2/lib:/opt/hhvm-3.30.12-5/common/lib:/opt/hhvm-3.30.12-5/git/lib:/opt/hhvm-3.30.12-5/varnish/lib:/opt/hhvm-3.30.12-5/varnish/lib/varnish:/opt/hhvm-3.30.12-5/varnish/lib/varnish/vmods:/opt/hhvm-3.30.12-5/sqlite/lib:/opt/hhvm-3.30.12-5/mysql/lib:/opt/hhvm-3.30.12-5/apache2/lib:/opt/hhvm-3.30.12-5/common/lib:/opt/hhvm-3.30.12-5/common/lib64
+            [GIT_SSL_CAINFO] => /opt/hhvm-3.30.12-5/common/openssl/certs/curl-ca-bundle.crt
+            [LDAPCONF] => /opt/hhvm-3.30.12-5/common/etc/openldap/ldap.conf
+            [HOME] => /root
+            [OLDPWD] => /root
+            [TERMINFO] => /opt/hhvm-3.30.12-5/common/share/terminfo
+            [LDFLAGS] => -L/opt/hhvm-3.30.12-5/common/lib -L/opt/hhvm-3.30.12-5/common/lib 
+            [SSL_CERT_FILE] => /opt/hhvm-3.30.12-5/common/openssl/certs/curl-ca-bundle.crt
+            [OPENSSL_ENGINES] => /opt/hhvm-3.30.12-5/common/lib/engines
+            [WSL_DISTRO_NAME] => Ubuntu-18.04
+            [COMPOSER_HOME] => /opt/hhvm-3.30.12-5/php/composer
+            [LOGNAME] => root
+            [FREETDSLOCALES] => /opt/hhvm-3.30.12-5/common/etc/locales.conf
+            [WSL_INTEROP] => /run/WSL/9_interop
+            [NAME] => BobosRevenge
+            [_] => /opt/hhvm-3.30.12-5/ctlscript.sh
+            [MAGICK_CONFIGURE_PATH] => /opt/hhvm-3.30.12-5/common/lib/ImageMagick-6.9.8/config-Q16:/opt/hhvm-3.30.12-5/common/
+            [OPENSSL_CONF] => /opt/hhvm-3.30.12-5/common/openssl/openssl.cnf
+            [PKG_CONFIG_PATH] => /opt/hhvm-3.30.12-5/common/lib64/pkgconfig:/opt/hhvm-3.30.12-5/common/lib/pkgconfig
+            [TERM] => xterm-256color
+            [PATH] => /opt/hhvm-3.30.12-5/git/bin:/opt/hhvm-3.30.12-5/varnish/bin:/opt/hhvm-3.30.12-5/sqlite/bin:/opt/hhvm-3.30.12-5/hhvm/bin:/opt/hhvm-3.30.12-5/php/bin:/opt/hhvm-3.30.12-5/mysql/bin:/opt/hhvm-3.30.12-5/letsencrypt/:/opt/hhvm-3.30.12-5/apache2/bin:/opt/hhvm-3.30.12-5/common/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.Ubuntu18.04onWindows_1804.2020.824.0_x64__79rhkp1fndgsc:/mnt/c/Perl64/site/bin:/mnt/c/Perl64/bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Intel/iCLS Client/:/mnt/c/Program Files/Intel/iCLS Client/:/mnt/c/Program Files/Common Files/Microsoft Shared/Windows Live:/mnt/c/Program Files (x86)/Common Files/Microsoft Shared/Windows Live:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files/V64:/mnt/c/4NT:/mnt/c/CMS/bin:/mnt/c/Program Files (x86)/QuickTime/QTSystem/:/mnt/c/ProgramData/Oracle/Java/javapath:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/d/PHP:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/MinGW/bin:/mnt/c/Program Files (x86)/Windows Live/Shared:/mnt/c/ProgramData/chocolatey/bin:/mnt/d/composer:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files (x86)/AOMEI Backupper:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/PuTTY/:/mnt/c/Users/Wright/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Wright/AppData/Roaming/Composer/vendor/bin:/mnt/c/Users/Wright/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/Wright/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Wright/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin
+            [CFLAGS] => -I/opt/hhvm-3.30.12-5/common/include/ImageMagick -I/opt/hhvm-3.30.12-5/common/include -I/opt/hhvm-3.30.12-5/common/include/ImageMagick -I/opt/hhvm-3.30.12-5/common/include 
+            [MAGICK_CODER_MODULE_PATH] => /opt/hhvm-3.30.12-5/common/lib/ImageMagick-6.9.8/modules-Q16/coders
+            [LANG] => C.UTF-8
+            [MAGICK_HOME] => /opt/hhvm-3.30.12-5/common
+            [LS_COLORS] => rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:
+            [SHELL] => /bin/bash
+            [FREETDSCONF] => /opt/hhvm-3.30.12-5/common/etc/freetds.conf
+            [LESSCLOSE] => /usr/bin/lesspipe %s %s
+            [PWD] => /opt/hhvm-3.30.12-5
+            [XDG_DATA_DIRS] => /usr/local/share:/usr/share:/var/lib/snapd/desktop
+            [PHP_PATH] => /opt/hhvm-3.30.12-5/php/bin/php
+            [HOSTTYPE] => x86_64
+            [WSLENV] => 
+            [GLIBCPP_FORCE_NEW] => 1
+            [GLIBCXX_FORCE_NEW] => 1
+            [UNW_RBP_ALWAYS_VALID] => 1
+            [HPHP] => 1
+            [HHVM] => 1
+            [HHVM_JIT] => 1
+            [HHVM_ARCH] => x64
+            [HPHP_SERVER] => 1
+            [HPHP_HOTPROFILER] => 1
+            [REMOTE_ADDR] => 127.0.0.1
+            [SERVER_PORT] => 8080
+            [SERVER_SOFTWARE] => Apache
+            [HTTP_ACCEPT_LANGUAGE] => en-US,en;q=0.9
+            [HTTP_COOKIE] => PHPSESSID=6ab6ee361d2069498b857cd0ad0ee400; ComicBuilder=202f0ff541c4f40f6e49e79d8f8f910a
+            [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36
+            [HTTP_SEC_FETCH_USER] => ?1
+            [SCRIPT_FILENAME] => proxy:fcgi://www-hhvm/opt/hhvm-3.30.12-5/apache2/htdocs/dumpSession.php
+            [SCRIPT_NAME] => /dumpSession.php
+            [SERVER_NAME] => 127.0.0.1
+            [CONTEXT_PREFIX] => 
+            [REMOTE_PORT] => 37946
+            [GATEWAY_INTERFACE] => CGI/1.1
+            [REQUEST_URI] => /dumpSession.php
+            [QUERY_STRING] => 
+            [SERVER_PROTOCOL] => HTTP/1.1
+            [SERVER_SIGNATURE] => 
+            [HTTP_SEC_FETCH_SITE] => none
+            [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+            [HTTP_SEC_FETCH_DEST] => document
+            [HTTP_SEC_FETCH_MODE] => navigate
+            [SERVER_ADMIN] => you@example.com
+            [REQUEST_METHOD] => GET
+            [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+            [REQUEST_SCHEME] => http
+            [CONTEXT_DOCUMENT_ROOT] => /opt/hhvm-3.30.12-5/apache2/htdocs
+            [SERVER_ADDR] => 127.0.0.1
+            [DOCUMENT_ROOT] => /opt/hhvm-3.30.12-5/apache2/htdocs
+            [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+            [HTTP_CONNECTION] => keep-alive
+            [HTTP_HOST] => 127.0.0.1:8080
+        )
+
+    [_FILES] => Array
+        (
+        )
+
+    [_GET] => Array
+        (
+        )
+
+    [_POST] => Array
+        (
+        )
+
+    [_REQUEST] => Array
+        (
+            [PHPSESSID] => 6ab6ee361d2069498b857cd0ad0ee400
+            [ComicBuilder] => 202f0ff541c4f40f6e49e79d8f8f910a
+        )
+
+    [_SERVER] => Array
+        (
+            [REQUEST_START_TIME] => 1603750978
+            [REQUEST_TIME] => 1603750978
+            [REQUEST_TIME_FLOAT] => 1603750978.9626
+            [HTTP_ACCEPT_LANGUAGE] => en-US,en;q=0.9
+            [HTTP_COOKIE] => PHPSESSID=6ab6ee361d2069498b857cd0ad0ee400; ComicBuilder=202f0ff541c4f40f6e49e79d8f8f910a
+            [HTTP_SEC_FETCH_MODE] => navigate
+            [HTTP_SEC_FETCH_USER] => ?1
+            [HTTP_ACCEPT_ENCODING] => gzip, deflate, br
+            [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+            [HTTP_SEC_FETCH_SITE] => none
+            [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+            [HTTP_SEC_FETCH_DEST] => document
+            [HTTP_CONNECTION] => keep-alive
+            [HTTP_HOST] => 127.0.0.1:8080
+            [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36
+            [GATEWAY_INTERFACE] => CGI/1.1
+            [SERVER_ADDR] => 127.0.0.1
+            [SERVER_NAME] => 127.0.0.1
+            [SERVER_PORT] => 8080
+            [SERVER_SOFTWARE] => Apache
+            [SERVER_PROTOCOL] => HTTP/1.1
+            [SERVER_ADMIN] => you@example.com
+            [SERVER_SIGNATURE] => 
+            [REMOTE_ADDR] => 127.0.0.1
+            [LD_LIBRARY_PATH] => /opt/hhvm-3.30.12-5/sqlite/lib:/opt/hhvm-3.30.12-5/mysql/lib:/opt/hhvm-3.30.12-5/apache2/lib:/opt/hhvm-3.30.12-5/common/lib:/opt/hhvm-3.30.12-5/sqlite/lib:/opt/hhvm-3.30.12-5/mysql/lib:/opt/hhvm-3.30.12-5/apache2/lib:/opt/hhvm-3.30.12-5/common/lib:/opt/hhvm-3.30.12-5/git/lib:/opt/hhvm-3.30.12-5/varnish/lib:/opt/hhvm-3.30.12-5/varnish/lib/varnish:/opt/hhvm-3.30.12-5/varnish/lib/varnish/vmods:/opt/hhvm-3.30.12-5/sqlite/lib:/opt/hhvm-3.30.12-5/mysql/lib:/opt/hhvm-3.30.12-5/apache2/lib:/opt/hhvm-3.30.12-5/common/lib:/opt/hhvm-3.30.12-5/common/lib64
+            [SCRIPT_FILENAME] => /opt/hhvm-3.30.12-5/apache2/htdocs/dumpSession.php
+            [SCRIPT_NAME] => /dumpSession.php
+            [CONTEXT_PREFIX] => 
+            [REMOTE_PORT] => 37946
+            [REQUEST_URI] => /dumpSession.php
+            [QUERY_STRING] => 
+            [REQUEST_METHOD] => GET
+            [REQUEST_SCHEME] => http
+            [CONTEXT_DOCUMENT_ROOT] => /opt/hhvm-3.30.12-5/apache2/htdocs
+            [PATH] => /opt/hhvm-3.30.12-5/git/bin:/opt/hhvm-3.30.12-5/varnish/bin:/opt/hhvm-3.30.12-5/sqlite/bin:/opt/hhvm-3.30.12-5/hhvm/bin:/opt/hhvm-3.30.12-5/php/bin:/opt/hhvm-3.30.12-5/mysql/bin:/opt/hhvm-3.30.12-5/letsencrypt/:/opt/hhvm-3.30.12-5/apache2/bin:/opt/hhvm-3.30.12-5/common/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.Ubuntu18.04onWindows_1804.2020.824.0_x64__79rhkp1fndgsc:/mnt/c/Perl64/site/bin:/mnt/c/Perl64/bin:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Intel/iCLS Client/:/mnt/c/Program Files/Intel/iCLS Client/:/mnt/c/Program Files/Common Files/Microsoft Shared/Windows Live:/mnt/c/Program Files (x86)/Common Files/Microsoft Shared/Windows Live:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/IPT:/mnt/c/Program Files/V64:/mnt/c/4NT:/mnt/c/CMS/bin:/mnt/c/Program Files (x86)/QuickTime/QTSystem/:/mnt/c/ProgramData/Oracle/Java/javapath:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/d/PHP:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/MinGW/bin:/mnt/c/Program Files (x86)/Windows Live/Shared:/mnt/c/ProgramData/chocolatey/bin:/mnt/d/composer:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files (x86)/AOMEI Backupper:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/PuTTY/:/mnt/c/Users/Wright/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Wright/AppData/Roaming/Composer/vendor/bin:/mnt/c/Users/Wright/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/Wright/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Wright/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin
+            [DOCUMENT_ROOT] => /opt/hhvm-3.30.12-5/apache2/htdocs
+            [SCRIPT_URL] => /dumpSession.php
+            [SCRIPT_URI] => http://127.0.0.1:8080/dumpSession.php
+            [PHP_SELF] => /dumpSession.php
+            [HTTPS] => 
+            [argv] => Array
+                (
+                    [0] => 
+                )
+
+            [argc] => 1
+            [THREAD_TYPE] => Web Request
+        )
+
+    [_SESSION] => Array
+        (
+        )
+
+    [argc] => 
+    [argv] => 
+    [dbHost] => localhost
+    [dbName] => Session
+    [dbPassword] => Hacker
+    [dbUsername] => root
+    [link] => mysqli Object
+        (
+            [__connection:mysqli:private] => Resource id #6
+        )
+
+    [session] => Zebra_Session Object
+        (
+            [flashdata:Zebra_Session:private] => Array
+                (
+                )
+
+            [flashdata_varname:Zebra_Session:private] => _zebra_session_flashdata_ec3asbuiad
+            [session_lifetime:Zebra_Session:private] => 1440
+            [link:Zebra_Session:private] => mysqli Object
+                (
+                    [__connection:mysqli:private] => Resource id #6
+                )
+
+            [lock_timeout:Zebra_Session:private] => 60
+            [lock_to_ip:Zebra_Session:private] => 
+            [lock_to_user_agent:Zebra_Session:private] => 1
+            [table_name:Zebra_Session:private] => `session_data`
+            [security_code] => A_c0dE_4_sEcUr1tY
+            [session_lock] => session_98e8dcf66a5613cf60911196918eec2cf23f3ac7
+        )
+
+)
+Get browser details using navigator
+Browser CodeName: Mozilla
+Browser Name: Netscape
+Browser Version: 5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36
+Cookies Enabled: true
+Platform: Win32
+Engine name: Gecko
+User-agent header: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36
